@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokeredMessaging.ChatConsole", "BrokeredMessaging.ChatConsole\BrokeredMessaging.ChatConsole.csproj", "{AF0E6403-67B5-4DBE-BF9A-E9757F6A289E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokeredMessaging.ChatConsole", "BrokeredMessaging.ChatConsole\BrokeredMessaging.ChatConsole.csproj", "{AF0E6403-67B5-4DBE-BF9A-E9757F6A289E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokeredMessaging.Sender", "BrokeredMessaging.Sender\BrokeredMessaging.Sender.csproj", "{3F2E944D-CDB0-4B3E-9C8D-6E3BC47065E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokeredMessaging.Sender", "BrokeredMessaging.Sender\BrokeredMessaging.Sender.csproj", "{3F2E944D-CDB0-4B3E-9C8D-6E3BC47065E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokeredMessaging.Receiver", "BrokeredMessaging.Receiver\BrokeredMessaging.Receiver.csproj", "{D3E25F4B-F83E-4000-9EDF-95C4B0A171A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokeredMessaging.Receiver", "BrokeredMessaging.Receiver\BrokeredMessaging.Receiver.csproj", "{D3E25F4B-F83E-4000-9EDF-95C4B0A171A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokeredMessagingSenderAndReceiver", "BrokeredMessagingSenderAndReceiver\BrokeredMessagingSenderAndReceiver.csproj", "{D79FC141-2B52-404D-A88D-08D56F319834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokeredMessagingSenderAndReceiver", "BrokeredMessagingSenderAndReceiver\BrokeredMessagingSenderAndReceiver.csproj", "{D79FC141-2B52-404D-A88D-08D56F319834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryMassTransit", "TryMassTransit\TryMassTransit.csproj", "{52294180-B688-46A8-8684-9BC156A2DD5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D79FC141-2B52-404D-A88D-08D56F319834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D79FC141-2B52-404D-A88D-08D56F319834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D79FC141-2B52-404D-A88D-08D56F319834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52294180-B688-46A8-8684-9BC156A2DD5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52294180-B688-46A8-8684-9BC156A2DD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52294180-B688-46A8-8684-9BC156A2DD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52294180-B688-46A8-8684-9BC156A2DD5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

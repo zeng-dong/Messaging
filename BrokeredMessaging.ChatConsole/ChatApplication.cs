@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace BrokeredMessaging.ChatConsole
 {
-    public class ChapApplication
+    public class ChatApplication
     {
         private SettingsReader _settingReader;
         static string TopicPath = "chat-topic";
         string ConnectionString = string.Empty;
-        public ChapApplication(SettingsReader settingsReader)
+        public ChatApplication(SettingsReader settingsReader)
         {
             _settingReader = settingsReader;
             ConnectionString = _settingReader.Settings.ConnectionString;
@@ -21,6 +21,8 @@ namespace BrokeredMessaging.ChatConsole
 
         public void Run()
         {
+            Console.WriteLine("Connection String = " + ConnectionString);
+            Console.WriteLine("Topic Path = " + TopicPath);
             Console.WriteLine("Enter name:");
             var userName = Console.ReadLine();
 

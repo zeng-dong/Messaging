@@ -7,7 +7,7 @@ using System;
 
 namespace BrokeredMessaging.ChatConsole
 {
-    class Program
+    class ChatConsole
     {
         private static IServiceProvider _servicesProvider;
         static void Main(string[] args)
@@ -17,7 +17,10 @@ namespace BrokeredMessaging.ChatConsole
             try
             {
                 var ci = _servicesProvider.GetService<SettingsReader>();
-                ci.DescribeSettings();
+                //ci.DescribeSettings();
+                var chat = new ChatApplication(ci);
+                chat.Run();
+
 
                 DisposeServices();
                 Log.Information("Finished Program.");
@@ -41,7 +44,7 @@ namespace BrokeredMessaging.ChatConsole
         {
             IConfiguration config = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", true, true)
-                .AddUserSecrets(typeof(Program).Assembly)
+                .AddUserSecrets(typeof(ChatConsole).Assembly)
                 .Build();
 
             var services = ConfigureServicesProvider(config);
