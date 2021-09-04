@@ -14,7 +14,7 @@ namespace BrokeredMessaging.Sender
         private static IServiceProvider _servicesProvider;
 
         static string ConnectionString = "";
-        static string QueuePath = "chat-demo-queue";
+        static string QueuePath = "pl-chat-demo-queue";
 
         static void Main(string[] args)
         {

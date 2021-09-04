@@ -1,0 +1,12 @@
+2021-09-01 08:56:35.684 -05:00 [FTL] An unhandled exception occurred.
+System.AggregateException: One or more errors occurred. (Put token failed. status-code: 404, status-description: The messaging entity 'sb://freshbite.servicebus.windows.net/pl-chat-demo-queue' could not be found. To know more visit https://aka.ms/sbResourceMgrExceptions.  TrackingId:cd9e8eb6-4ce1-47e5-bafa-09f2ff224938_G12, SystemTracker:freshbite.servicebus.windows.net:pl-chat-demo-queue, Timestamp:2021-09-01T13:56:36.)
+ ---> Microsoft.Azure.ServiceBus.MessagingEntityNotFoundException: Put token failed. status-code: 404, status-description: The messaging entity 'sb://freshbite.servicebus.windows.net/pl-chat-demo-queue' could not be found. To know more visit https://aka.ms/sbResourceMgrExceptions.  TrackingId:cd9e8eb6-4ce1-47e5-bafa-09f2ff224938_G12, SystemTracker:freshbite.servicebus.windows.net:pl-chat-demo-queue, Timestamp:2021-09-01T13:56:36.
+   at Microsoft.Azure.ServiceBus.Core.MessageSender.OnSendAsync(IList`1 messageList)
+   at Microsoft.Azure.ServiceBus.RetryPolicy.RunOperation(Func`1 operation, TimeSpan operationTimeout)
+   at Microsoft.Azure.ServiceBus.RetryPolicy.RunOperation(Func`1 operation, TimeSpan operationTimeout)
+   at Microsoft.Azure.ServiceBus.Core.MessageSender.SendAsync(IList`1 messageList)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at BrokeredMessaging.Sender.SenderConsole.Run() in C:\Dev\githubrepos\Messaging\BrokeredMessaging.Sender\SenderConsole.cs:line 42
