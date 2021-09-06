@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryMassTransit", "TryMassTr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kafka", "Kafka", "{9619F005-4580-4761-AB71-E8EC2CA2A0A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryingKafka.Services", "Kafka\TryingKafka.Services\TryingKafka.Services\TryingKafka.Services.csproj", "{53FE0149-366B-44D4-A9B1-2AB9A5941D0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryingKafka.KafkaService", "Kafka\TryingKafka.Services\TryingKafka.Services\TryingKafka.KafkaService.csproj", "{53FE0149-366B-44D4-A9B1-2AB9A5941D0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

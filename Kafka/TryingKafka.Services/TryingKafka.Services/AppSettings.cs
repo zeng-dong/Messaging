@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TryingKafka.Services
+namespace TryingKafka.KafkaService
 {
     public static class AppSettings
     {

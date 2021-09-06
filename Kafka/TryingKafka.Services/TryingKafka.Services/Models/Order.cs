@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TryingKafka.Services.Models
+namespace TryingKafka.KafkaService.Models
 {
     public class Order
     {

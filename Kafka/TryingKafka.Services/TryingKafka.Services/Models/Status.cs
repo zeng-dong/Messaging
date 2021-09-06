@@ -1,4 +1,4 @@
-﻿namespace TryingKafka.Services.Models
+﻿namespace TryingKafka.KafkaService.Models
 {
     public enum Status
     {
