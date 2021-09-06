@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kafka", "Kafka", "{9619F005
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryingKafka.KafkaService", "Kafka\TryingKafka.Services\TryingKafka.Services\TryingKafka.KafkaService.csproj", "{53FE0149-366B-44D4-A9B1-2AB9A5941D0E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{4B33B7D0-4036-4591-A190-F60A36BA3BF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Ordering", "Kafka\Services\Services.Ordering\Services.Ordering\Services.Ordering.csproj", "{19919998-4DC4-4E73-9336-FA60D44A4C7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,12 +51,18 @@ Global
 		{53FE0149-366B-44D4-A9B1-2AB9A5941D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53FE0149-366B-44D4-A9B1-2AB9A5941D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53FE0149-366B-44D4-A9B1-2AB9A5941D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19919998-4DC4-4E73-9336-FA60D44A4C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19919998-4DC4-4E73-9336-FA60D44A4C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19919998-4DC4-4E73-9336-FA60D44A4C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19919998-4DC4-4E73-9336-FA60D44A4C7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{53FE0149-366B-44D4-A9B1-2AB9A5941D0E} = {9619F005-4580-4761-AB71-E8EC2CA2A0A0}
+		{4B33B7D0-4036-4591-A190-F60A36BA3BF8} = {9619F005-4580-4761-AB71-E8EC2CA2A0A0}
+		{19919998-4DC4-4E73-9336-FA60D44A4C7A} = {4B33B7D0-4036-4591-A190-F60A36BA3BF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F4FCC57-B87B-4086-B5D8-A8E0ABF41A38}
