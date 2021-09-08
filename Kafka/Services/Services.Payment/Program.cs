@@ -49,7 +49,7 @@ namespace Services.Payment
         private static (Report, bool) DoPaymentProcess(Order order)
         {
             var isProcessed = false;
-            Thread.Sleep(1000);
+            Thread.Sleep(10000);
 
             var report = new Report()
             {
