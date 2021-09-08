@@ -40,7 +40,7 @@ namespace Services.Ordering
         private static (Order, Report) DoOrdering()
         {
             var rnd = new Random();
-            Thread.Sleep(1000);
+            Thread.Sleep(10000);
             var pId = rnd.Next(111111, 999999);
 
             var order = new Order()

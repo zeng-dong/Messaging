@@ -14,4 +14,10 @@
     <ProjectReference Include="..\..\TryingKafka.Services\TryingKafka.Services\TryingKafka.KafkaService.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
