@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Inventory", "Kafka
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Payment", "Kafka\Services\Services.Payment\Services.Payment.csproj", "{73422E2F-0EFE-432E-94A4-52E7D0F39F48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Dispatch", "Kafka\Services\Services.Dispatch\Services.Dispatch.csproj", "{BF9D3ADE-48AC-4770-B6B8-FFAB8B937392}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{73422E2F-0EFE-432E-94A4-52E7D0F39F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73422E2F-0EFE-432E-94A4-52E7D0F39F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73422E2F-0EFE-432E-94A4-52E7D0F39F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9D3ADE-48AC-4770-B6B8-FFAB8B937392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9D3ADE-48AC-4770-B6B8-FFAB8B937392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9D3ADE-48AC-4770-B6B8-FFAB8B937392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9D3ADE-48AC-4770-B6B8-FFAB8B937392}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{19919998-4DC4-4E73-9336-FA60D44A4C7A} = {4B33B7D0-4036-4591-A190-F60A36BA3BF8}
 		{7A1A5D90-05BA-48BD-BB13-59C2A33F7E00} = {4B33B7D0-4036-4591-A190-F60A36BA3BF8}
 		{73422E2F-0EFE-432E-94A4-52E7D0F39F48} = {9619F005-4580-4761-AB71-E8EC2CA2A0A0}
+		{BF9D3ADE-48AC-4770-B6B8-FFAB8B937392} = {4B33B7D0-4036-4591-A190-F60A36BA3BF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F4FCC57-B87B-4086-B5D8-A8E0ABF41A38}
