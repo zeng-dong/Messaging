@@ -12,7 +12,7 @@ namespace Services.Ordering
     {
         static async Task Main(string[] args)
         {
-            ConsoleWriter.Information("Ordering Service. First service. Publish to ReportedTopic and SubmittedTopic");
+            ConsoleWriter.Information("Ordering Service.");
 
             var configuration = new ConfigurationBuilder()
                 .AddJsonFile("appSettings.json", optional: true, reloadOnChange: true).Build();

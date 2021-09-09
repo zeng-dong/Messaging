@@ -11,7 +11,7 @@ namespace Services.Reporting
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Reporting Service");
+            ConsoleWriter.Information("Reporting Service.");
 
             var configuration = new ConfigurationBuilder()
                 .AddJsonFile("appSettings.json", optional: true, reloadOnChange: true).Build();

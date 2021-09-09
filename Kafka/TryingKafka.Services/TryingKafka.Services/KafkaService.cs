@@ -20,6 +20,11 @@ namespace TryingKafka.KafkaService
 
             if (producer != null && producer.Count > 0)
             {
+                foreach (var pair in producer)
+                {
+                    ConsoleWriter.Information($"   Producer: {pair.Key}-{pair.Value}");
+                }
+
                 var _producerConfig = new ProducerConfig()
                 {
                     BootstrapServers = producer?.Where(x => x.Key.Equals("BootStrapServers")).FirstOrDefault().Value
@@ -30,6 +35,11 @@ namespace TryingKafka.KafkaService
 
             if (consumer != null && consumer.Count > 0)
             {
+                foreach (var pair in consumer)
+                {
+                    ConsoleWriter.Information($"   Consumer: {pair.Key}-{pair.Value}");
+                }
+
                 var _consumerConfig = new ConsumerConfig()
                 {
                     BootstrapServers = consumer?.Where(x => x.Key.Equals("BootStrapServers")).FirstOrDefault().Value,
@@ -40,6 +50,8 @@ namespace TryingKafka.KafkaService
                 _consumerBuilder = new ConsumerBuilder<Null, string>(_consumerConfig).Build();
 
                 _consumerBuilder.Subscribe(consumer?.Where(x => x.Key.Equals("TopicName")).FirstOrDefault().Value);
+
+                ConsoleWriter.Information($"     Subscribed to {consumer?.Where(x => x.Key.Equals("TopicName")).FirstOrDefault().Value}");
 
                 _cancellationTokenSource = new CancellationTokenSource();
                 Console.CancelKeyPress += (_, e) =>

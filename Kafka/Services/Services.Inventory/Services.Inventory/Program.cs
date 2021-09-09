@@ -13,7 +13,7 @@ namespace Services.Inventory
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Inventory Service");
+            ConsoleWriter.Information("Inventory Service.");
 
             ConsumeResult<Null, string> subResult;
             DeliveryResult<Null, string> pubResult;
@@ -40,7 +40,7 @@ namespace Services.Inventory
 
                     string jsonData = JsonSerializer.Serialize(report);
                     (pubResult, error) = await kafkaService.Publish(producerReportedTopicName, jsonData);
-                    Console.WriteLine($"Report [{report}] Published to Topic [{producerReportedTopicName}]");
+                    ConsoleWriter.PublishValid($"Report [{report}] Published to Topic [{producerReportedTopicName}]");
 
                     if (isValidated)
                     {

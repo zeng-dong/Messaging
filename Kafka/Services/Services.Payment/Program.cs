@@ -13,7 +13,7 @@ namespace Services.Payment
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Payment Service");
+            ConsoleWriter.Information("Payment Service.");
 
             ConsumeResult<Null, string> subResult;
             DeliveryResult<Null, string> pubResult;
@@ -34,14 +34,23 @@ namespace Services.Payment
                 if (error == string.Empty)
                 {
                     var order = JsonSerializer.Deserialize<Order>(subResult.Message.Value);
+                    ConsoleWriter.SubscribeReceived($"Order arrived [{order}]");
 
                     var (report, isProcessed) = DoPaymentProcess(order);
 
                     string jsonData = JsonSerializer.Serialize(report);
                     (pubResult, error) = await kafkaService.Publish(producerReportedTopicName, jsonData);
+                    Console.WriteLine($"Report [{report}] Published to Topic [{producerReportedTopicName}]");
 
                     if (isProcessed)
+                    {
                         (pubResult, error) = await kafkaService.Publish(producerProcessedTopicName, subResult.Message.Value);
+                        ConsoleWriter.PublishValid($"Processed Order [{order}] Published to [{producerProcessedTopicName}]");
+                    }
+                    else
+                    {
+                        ConsoleWriter.ReportInvalid($"UNProcessed Order [{order}] NOT Published to [{producerProcessedTopicName}]");
+                    }
                 }
             }
         }

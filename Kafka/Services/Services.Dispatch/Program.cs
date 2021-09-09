@@ -13,7 +13,7 @@ namespace Services.Dispatch
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Dispatch Service");
+            ConsoleWriter.Information("Dispatch Service.");
 
             ConsumeResult<Null, string> subResult;
             DeliveryResult<Null, string> pubResult;
