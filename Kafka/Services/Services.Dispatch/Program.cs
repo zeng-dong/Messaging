@@ -33,11 +33,13 @@ namespace Services.Dispatch
                 if (error == string.Empty)
                 {
                     var order = JsonSerializer.Deserialize<Order>(subResult.Message.Value);
+                    ConsoleWriter.SubscribeReceived($"Order arrived [{order}]");
 
                     var report = DoDispatch(order);
 
                     string jsonData = JsonSerializer.Serialize(report);
                     (pubResult, error) = await kafkaService.Publish(producerReportedTopicName, jsonData);
+                    ConsoleWriter.PublishValid($"Valid Order [{order}] Published to [{producerReportedTopicName}]");
                 }
             }
         }

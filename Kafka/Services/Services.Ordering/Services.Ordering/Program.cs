@@ -12,7 +12,7 @@ namespace Services.Ordering
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Ordering Service");
+            ConsoleWriter.Information("Ordering Service. First service. Publish to ReportedTopic and SubmittedTopic");
 
             var configuration = new ConfigurationBuilder()
                 .AddJsonFile("appSettings.json", optional: true, reloadOnChange: true).Build();
@@ -28,12 +28,12 @@ namespace Services.Ordering
 
                 string jsonData = JsonSerializer.Serialize(report);
                 var (result, error) = await kafkaService.Publish(producerReportedTopicName, jsonData);
-                Console.WriteLine($"Result: {result.Key}-{result.Message}");
+                Console.WriteLine($"Report [{report}] Published to Topic [{producerReportedTopicName}]");
 
                 jsonData = JsonSerializer.Serialize(order);
                 (result, error) = await kafkaService.Publish(producerSubmittedTopicName, jsonData);
 
-                Console.WriteLine($"Result: {result.Key}-{result.Message}");
+                Console.WriteLine($"Order [{order}] Published to [{producerSubmittedTopicName}]");
             }
         }
 

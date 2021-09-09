@@ -9,5 +9,10 @@ namespace TryingKafka.KafkaService.Models
         public string Details { get; set; }
         public Status Status { get; set; }
         public DateTime CreatedOn { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}; Status:{Status}; Details:{Details}; On:{CreatedOn}. For Order: {Order.ToString()}";
+        }
     }
 }

@@ -34,17 +34,25 @@ namespace Services.Inventory
                 if (error == string.Empty)
                 {
                     var order = JsonSerializer.Deserialize<Order>(subResult.Message.Value);
+                    ConsoleWriter.SubscribeReceived($"Order arrived [{order}]");
 
                     var (report, isValidated) = DoInventory(order);
 
                     string jsonData = JsonSerializer.Serialize(report);
                     (pubResult, error) = await kafkaService.Publish(producerReportedTopicName, jsonData);
+                    Console.WriteLine($"Report [{report}] Published to Topic [{producerReportedTopicName}]");
 
                     if (isValidated)
+                    {
                         (pubResult, error) = await kafkaService.Publish(producerValidatedTopicName, subResult.Message.Value);
+                        ConsoleWriter.PublishValid($"Valid Order [{order}] Published to [{producerValidatedTopicName}]");
+                    }
+                    else
+                    {
+                        ConsoleWriter.ReportInvalid($"Invalid Order [{order}] NOT Published to [{producerValidatedTopicName}]");
+                    }
                 }
             }
-
         }
 
         private static (Report, bool) DoInventory(Order order)
